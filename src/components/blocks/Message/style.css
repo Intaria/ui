@@ -8,8 +8,8 @@
 }
   
 .ui-message .ui-message-body {
-    grow: 1;
-    shrink: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     flex-direction: column;
 }
   
