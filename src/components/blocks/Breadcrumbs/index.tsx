@@ -2,7 +2,7 @@ import {createElement} from 'react'
 import {Breadcrumbs as BaseBreadcrumbs} from '@mantine/core'
 import type {BreadcrumbsProps as BaseBreadcrumbsProps} from '@mantine/core'
 
-import {Link} from '~ui'
+import {Link} from '~ui/components'
 
 import './style.css'
 

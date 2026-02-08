@@ -5,7 +5,7 @@ import {useState} from 'react'
 import {Table as BaseTable} from '@mantine/core'
 import type {TableProps as BaseTableProps} from '@mantine/core'
 
-import {Icon} from '~ui'
+import {Icon} from '~ui/components'
 
 import './style.css'
 

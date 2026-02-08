@@ -1,5 +1,7 @@
 'use client'
 
+//TODO: move component outer or make it independed from next.js
+
 import {forwardRef} from 'react'
 import {useRouter} from 'next/navigation'
 

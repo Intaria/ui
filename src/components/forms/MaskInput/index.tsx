@@ -2,7 +2,7 @@
 
 import {IMaskInput} from 'react-imask'
 
-import {Input, type InputProps} from '~ui'
+import {Input, type InputProps} from '~ui/components'
 
 import type {IMaskInputProps} from 'react-imask'
 

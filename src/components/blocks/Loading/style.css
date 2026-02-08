@@ -1,11 +1,13 @@
 .ui-loading {
+  --loading-z-index: 2;
+
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: var(--loading-z-index, 2);
+  z-index: var(--loading-z-index);
 }
 
 .ui-loading .ui-loading-spinner {

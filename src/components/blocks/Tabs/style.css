@@ -34,11 +34,11 @@
   }
 
 .ui-tabs .ui-tabs-body {
-  flex-grow: unset;
+  grow: unset;
 }
 
 .ui-tabs[data-orientation='vertical'] .ui-tabs-body {
-  flex-grow: 1;
+  grow: 1;
 }
 
 .ui-tabs .ui-tabs-control {
