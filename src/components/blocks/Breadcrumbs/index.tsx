@@ -6,18 +6,19 @@ import {Link} from '~ui/components'
 
 import './style.css'
 
-interface BreadcrumbsProps extends Omit<BaseBreadcrumbsProps, "separatorMargin"> {
+interface BreadcrumbsProps extends Omit<BaseBreadcrumbsProps, "separatorMargin" | "children"> {
     items?: {
         title: string,
         href?: string
     }[]
+    children?: React.ReactNode
 }
 
 const Breadcrumbs = ({children = null, items, separator = '/', ...props}: BreadcrumbsProps) => {
 	return (
 		<nav itemScope itemType="http://data-vocabulary.org/Breadcrumb">
             <BaseBreadcrumbs separator={separator} {...props}>
-                {items && items.map((item, index) => createElement(
+                {items ? (items.map((item, index) => createElement(
                     item['href'] ? Link : 'span', {
                         key: index,
                         ...(item['href'] && {
@@ -25,9 +26,7 @@ const Breadcrumbs = ({children = null, items, separator = '/', ...props}: Breadc
                         })
                     },
                     (item['title']),
-                ))}
-
-                {children}
+                ))) : children}
             </BaseBreadcrumbs>
         </nav>
 	)
