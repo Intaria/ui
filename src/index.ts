@@ -1,5 +1,3 @@
-export * from './blocks/'
-export * from './effects/'
-export * from './forms/'
-export * from './modules/'
-export * from './texts/'
+export {UIProvider} from './provider/'
+
+export * from './components/'
