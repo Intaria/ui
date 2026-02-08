@@ -1,0 +1,1 @@
+export {useClipboard} from '@mantine/hooks'

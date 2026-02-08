@@ -1,0 +1,1 @@
+export {useClickOutside} from '@mantine/hooks'

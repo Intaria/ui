@@ -1,0 +1,1 @@
+export {getCookies, getCookie, setCookie, deleteCookie} from 'cookies-next'

@@ -1,0 +1,1 @@
+export {useFullscreen} from '@mantine/hooks'

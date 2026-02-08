@@ -1,0 +1,1 @@
+export {useWindowEvent} from '@mantine/hooks'
