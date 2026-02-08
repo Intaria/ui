@@ -1,0 +1,20 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@mantine/carousel": "^8.3.14",
+    "@mantine/charts": "^8.3.14",
+    "@mantine/code-highlight": "^8.3.14",
+    "@mantine/core": "^8.3.14",
+    "@mantine/dates": "^8.3.14",
+    "@mantine/dropzone": "^8.3.14",
+    "@mantine/notifications": "^8.3.14",
+    "@mantine/nprogress": "^8.3.14",
+    "embla-carousel-react": "^8.6.0",
+    "react-imask": "^7.6.1",
+    "react-qr-code": "^2.0.18",
+    "recharts": "^3.7.0"
+  }
+}

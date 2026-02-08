@@ -1,0 +1,25 @@
+.ui-skeleton {
+  height: var(--skeleton-height, auto);
+  width: var(--skeleton-width, 100%);
+  position: relative;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.ui-skeleton:where([data-visible]) {
+    overflow: hidden;
+  }
+
+  .ui-skeleton::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      z-index: 10;
+    }
+
+.ui-skeleton::after {
+      position: absolute;
+      content: '';
+      inset: 0;
+      z-index: 11;
+    }

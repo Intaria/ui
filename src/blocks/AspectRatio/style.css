@@ -1,0 +1,14 @@
+.ui-aspect-ratio {
+  --ar-ratio: 1;
+
+  max-width: 100%;
+}
+
+.ui-aspect-ratio > :where(*:not(style)) {
+    aspect-ratio: var(--ar-ratio);
+    width: 100%;
+  }
+
+.ui-aspect-ratio > :where(img, video) {
+    object-fit: cover;
+  }

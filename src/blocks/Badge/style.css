@@ -1,0 +1,55 @@
+.ui-badge {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: default;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+  
+.ui-badge:where([data-with-left-section], [data-variant='dot']) {
+    grid-template-columns: auto 1fr;
+}
+
+.ui-badge:where([data-with-right-section]) {
+    grid-template-columns: 1fr auto;
+}
+
+.ui-badge:where(
+    [data-with-left-section][data-with-right-section],
+    [data-variant='dot'][data-with-right-section]
+  ) {
+    grid-template-columns: auto 1fr auto;
+  }
+
+.ui-badge:where([data-block]) {
+    display: flex;
+    width: 100%;
+  }
+
+.ui-badge:where([data-circle]) {
+    display: flex;
+}
+
+
+.ui-badge--dot::before {
+    content: '';
+    display: block;
+  }
+
+.ui-badge .ui-badge-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  cursor: inherit;
+}
+
+.ui-badge .ui-badge-section {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

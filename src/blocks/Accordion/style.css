@@ -1,0 +1,62 @@
+.ui-accordion .ui-accordion-panel {
+  overflow-wrap: break-word;
+}
+
+.ui-accordion .ui-accordion-item-title {
+  margin: 0;
+  padding: 0;
+}
+
+.ui-accordion .ui-accordion-control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  opacity: 1;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.ui-accordion .ui-accordion-control:where([data-chevron-position='left']) {
+    flex-direction: row;
+    padding-inline-start: 0;
+}
+
+.ui-accordion .ui-accordion-control:where(:disabled, [data-disabled]) {
+    cursor: not-allowed;
+}
+
+.ui-accordion .ui-accordion-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-accordion .ui-accordion-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transform: rotate(0deg);
+}
+
+.ui-accordion .ui-accordion-chevron:where([data-rotate]) {
+  transform: rotate(180deg);
+}
+
+.ui-accordion .ui-accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-accordion .ui-accordion-icon:where([data-chevron-position='left']) {
+    margin-inline-end: 0;
+}
+
+.ui-accordion .ui-accordion-item--contained + .ui-accordion-item--contained {
+    border-top: 0;
+}
+
+.ui-accordion .ui-accordion-item--separated {
+  border-color: transparent;
+}

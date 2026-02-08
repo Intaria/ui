@@ -1,0 +1,4 @@
+.ui-spinner {
+    display: inline-block;
+}
+/* TODO: add passed classes for oval, bar and other - and move default physics css here too*/

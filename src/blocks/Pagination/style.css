@@ -1,0 +1,22 @@
+.ui-pagination .ui-pagination-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: var(--pagination-control-size);
+  min-width: var(--pagination-control-size);
+  line-height: 1;
+}
+
+.ui-pagination .ui-pagination-control:where(:disabled, [data-disabled]) {
+    cursor: not-allowed;
+}
+
+.ui-pagination .ui-pagination-dots {
+  height: var(--pagination-control-size);
+  min-width: var(--pagination-control-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}

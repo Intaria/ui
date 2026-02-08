@@ -1,0 +1,56 @@
+.ui-indicator {
+  position: relative;
+  display: block;
+}
+
+.ui-indicator:where([data-inline]) {
+    display: inline-block;
+  }
+
+.ui-indicator:where([data-inline]) {
+    display: inline-block;
+}
+
+.ui-indicator .ui-indicator-point {
+  position: absolute;
+  top: var(--indicator-top, auto);
+  left: var(--indicator-left, auto);
+  right: var(--indicator-right, auto);
+  bottom: var(--indicator-bottom, auto);
+  transform: translate(var(--indicator-translate-x), var(--indicator-translate-y));
+  min-width: var(--indicator-size);
+  height: var(--indicator-size);
+  border-radius: var(--indicator-radius, 100%);
+  z-index: var(--indicator-z-index, 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--indicator-color);
+  white-space: nowrap;
+}
+
+.ui-indicator .ui-indicator-point::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--indicator-color);
+    border-radius: var(--indicator-radius, 100%);
+    z-index: -1;
+  }
+
+
+.ui-indicator .ui-indicator-point[data-processing]::before {
+      animation: ui-indicator-processing var(--indicator-animation-duration, 1000ms) linear infinite;
+}
+
+@keyframes ui-indicator-processing {
+  0% {
+    opacity: 0.6;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.8);
+  }
+}

@@ -1,0 +1,38 @@
+.ui-divider:where([data-orientation='horizontal']) {
+    border-top: var(--divider-size) var(--divider-style, solid) var(--divider-color);
+}
+
+.ui-divider:where([data-orientation='vertical']) {
+    border-inline-start: var(--divider-size) var(--divider-style, solid) var(--divider-color);
+    height: auto;
+    align-self: stretch;
+}
+
+.ui-divider:where([data-with-label]) {
+    border: 0;
+}
+
+.ui-divider .ui-divider-label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ui-divider .ui-divider-label:where([data-position='left'])::before,
+.ui-divider .ui-divider-label:where([data-position='right'])::after {
+    display: none;
+}
+
+.ui-divider .ui-divider-label::before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    border-top: var(--divider-size) var(--divider-style, solid) var(--divider-color);
+}
+
+.ui-divider .ui-divider-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    border-top: var(--divider-size) var(--divider-style, solid) var(--divider-color);
+}
