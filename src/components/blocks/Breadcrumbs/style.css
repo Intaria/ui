@@ -2,17 +2,17 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
 
-.ui-breadcrumbs .ui-breadcrumbs-item {
-  line-height: 1;
-  white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
-}
+  & .ui-breadcrumbs-item {
+    line-height: 1;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
 
-.ui-breadcrumbs .ui-breadcrumbs-separator {
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  & .ui-breadcrumbs-separator {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

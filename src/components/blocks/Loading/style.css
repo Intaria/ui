@@ -8,13 +8,13 @@
   justify-content: center;
   overflow: hidden;
   z-index: var(--loading-z-index);
-}
 
-.ui-loading .ui-loading-spinner {
-  position: relative;
-  z-index: calc(var(--loading-z-index) + 1);
-}
+  & .ui-loading-spinner {
+    position: relative;
+    z-index: calc(var(--loading-z-index) + 1);
+  }
 
-.ui-loading .ui-loading-overlay {
-  z-index: var(--loading-z-index);
+  & .ui-loading-overlay {
+    z-index: var(--loading-z-index);
+  }
 }

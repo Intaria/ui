@@ -4,62 +4,62 @@
   border-radius: var(--progress-radius);
   overflow: hidden;
   display: flex;
-}
 
-.ui-progress:where([data-orientation='vertical']) {
+    & .ui-progress-section {
+    height: 100%;
+    width: var(--progress-section-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: width var(--progress-transition-duration, 0) ease;
+
+    &:where(:last-of-type) {
+      border-radius: 0;
+      border-start-end-radius: var(--progress-radius);
+      border-end-end-radius: var(--progress-radius);
+    }
+
+    &:where(:first-of-type) {
+      border-radius: 0;
+      border-start-start-radius: var(--progress-radius);
+      border-end-start-radius: var(--progress-radius);
+    }
+  }
+
+  & .ui-progress-label {
+    user-select: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1;
+  }
+
+  &:where([data-orientation='vertical']) {
     height: auto;
     width: var(--progress-size);
     flex-direction: column-reverse;
-}
 
-.ui-progress .ui-progress-section {
-  height: 100%;
-  width: var(--progress-section-size);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: width var(--progress-transition-duration, 0) ease;
-}
+    & .ui-progress-section {
+      width: 100%;
+      height: var(--progress-section-size);
+      transition: height var(--progress-transition-duration, 0) ease;
 
-.ui-progress .ui-progress-section:where(:last-of-type) {
-    border-radius: 0;
-    border-start-end-radius: var(--progress-radius);
-    border-end-end-radius: var(--progress-radius);
-  }
+      &:where(:last-of-type) {
+        border-radius: 0;
+        border-start-start-radius: var(--progress-radius);
+        border-start-end-radius: var(--progress-radius);
+      }
 
-.ui-progress .ui-progress-section:where(:first-of-type) {
-    border-radius: 0;
-    border-start-start-radius: var(--progress-radius);
-    border-end-start-radius: var(--progress-radius);
-  }
-
-.ui-progress:where([data-orientation='vertical']) .ui-progress-section {
-    width: 100%;
-    height: var(--progress-section-size);
-    transition: height var(--progress-transition-duration, 0) ease;
-}
-
-.ui-progress:where([data-orientation='vertical']) .ui-progress-section:where(:last-of-type) {
-      border-radius: 0;
-      border-start-start-radius: var(--progress-radius);
-      border-start-end-radius: var(--progress-radius);
+      &:where(:first-of-type) {
+        border-radius: 0;
+        border-end-start-radius: var(--progress-radius);
+        border-end-end-radius: var(--progress-radius);
+      }
     }
 
-.ui-progress:where([data-orientation='vertical']) .ui-progress-section:where(:first-of-type) {
-      border-radius: 0;
-      border-end-start-radius: var(--progress-radius);
-      border-end-end-radius: var(--progress-radius);
-}
-
-.ui-progress .ui-progress-label {
-  user-select: none;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  line-height: 1;
-}
-
-.ui-progress:where([data-orientation='vertical']) & .ui-progress-label {
-    writing-mode: vertical-rl;
+    & .ui-progress-label {
+      writing-mode: vertical-rl;
+    }
+  }
 }

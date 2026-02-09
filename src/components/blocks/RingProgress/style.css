@@ -1,31 +1,32 @@
 .ui-ring-progress {
+  --ring-progress-transition-duration: 0ms;
+
   position: relative;
   width: var(--ring-progress-size);
   height: var(--ring-progress-size);
   min-width: var(--ring-progress-size);
   min-height: var(--ring-progress-size);
-  --ring-progress-transition-duration: 0ms;
-}
 
-.ui-ring-progress .ui-ring-progress-svg {
-  width: var(--ring-progress-size);
-  height: var(--ring-progress-size);
-  min-width: var(--ring-progress-size);
-  min-height: var(--ring-progress-size);
-  transform: rotate(-90deg);
-}
+  & .ui-ring-progress-svg {
+    width: var(--ring-progress-size);
+    height: var(--ring-progress-size);
+    min-width: var(--ring-progress-size);
+    min-height: var(--ring-progress-size);
+    transform: rotate(-90deg);
+  }
 
-.ui-ring-progress .ui-ring-progress-curve {
-  stroke: var(--curve-color, var(--ring-progress-curve-root-color));
-  transition:
-    stroke-dashoffset var(--ring-progress-transition-duration) ease,
-    stroke-dasharray var(--ring-progress-transition-duration) ease,
-    stroke var(--ring-progress-transition-duration);
-}
+  & .ui-ring-progress-curve {
+    stroke: var(--curve-color, var(--ring-progress-curve-root-color));
+    transition:
+      stroke-dashoffset var(--ring-progress-transition-duration) ease,
+      stroke-dasharray var(--ring-progress-transition-duration) ease,
+      stroke var(--ring-progress-transition-duration);
+  }
 
-.ui-ring-progress .ui-ring-progress-label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  inset-inline: var(--ring-progress-label-offset);
+  & .ui-ring-progress-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    inset-inline: var(--ring-progress-label-offset);
+  }
 }

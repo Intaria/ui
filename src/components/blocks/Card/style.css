@@ -3,20 +3,20 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
 
-.ui-card .ui-card-section {
-  display: block;
-}
-  
-.ui-card .ui-card-section:where(:first-child) {
-    border-top: none !important;
-}
+  & .ui-card-section {
+    display: block;
 
-.ui-card .ui-card-section:where(:last-child) {
-    border-bottom: none !important;
-}
+    & + .ui-card-section {
+        border-top: none !important;
+    }
 
-.ui-card .ui-card-section + .ui-card-section {
-    border-top: none !important;
+    &:where(:first-child) {
+        border-top: none !important;
+    }
+
+    &:where(:last-child) {
+        border-bottom: none !important;
+    }
+  }
 }

@@ -4,36 +4,36 @@
   position: relative;
   display: flex;
   align-items: center;
-}
 
-.ui-notification::before {
+  &::before {
     content: '';
     display: block;
     position: absolute;
   }
 
-.ui-notification:where([data-with-icon])::before {
+  & .ui-notification-icon {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .ui-notification-body {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  & .ui-notification-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & .ui-notification-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:where([data-with-icon])::before {
     display: none;
-}
-
-.ui-notification .ui-notification-icon {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ui-notification .ui-notification-body {
-  flex: 1;
-  overflow: hidden;
-}
-
-.ui-notification .ui-notification-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.ui-notification .ui-notification-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  }
 }

@@ -8,48 +8,53 @@
   cursor: default;
   text-overflow: ellipsis;
   overflow: hidden;
-}
-  
-.ui-badge:where([data-with-left-section], [data-variant='dot']) {
-    grid-template-columns: auto 1fr;
-}
 
-.ui-badge:where([data-with-right-section]) {
-    grid-template-columns: 1fr auto;
-}
+  & .ui-badge-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    cursor: inherit;
+  }
 
-.ui-badge:where(
+  & .ui-badge-section {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:where([data-with-left-section], [data-variant='dot']) {
+      grid-template-columns: auto 1fr;
+  }
+
+  &:where([data-with-right-section]) {
+      grid-template-columns: 1fr auto;
+  }
+
+  &:where(
     [data-with-left-section][data-with-right-section],
     [data-variant='dot'][data-with-right-section]
   ) {
     grid-template-columns: auto 1fr auto;
   }
 
-.ui-badge:where([data-block]) {
+  /* TODO: под вопросом, мб избыточно */
+
+  &:where([data-block]) {
     display: flex;
     width: 100%;
   }
 
-.ui-badge:where([data-circle]) {
-    display: flex;
+  /* TODO: под вопросом, мб избыточно */
+
+  &:where([data-circle]) {
+      display: flex;
+  }
 }
 
-
-.ui-badge--dot::before {
+.ui-badge--dot {
+  &::before {
     content: '';
     display: block;
   }
-
-.ui-badge .ui-badge-label {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  cursor: inherit;
-}
-
-.ui-badge .ui-badge-section {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }

@@ -1,71 +1,75 @@
 .ui-tabs {
   display: block;
   flex-direction: row;
-}
 
-.ui-tabs[data-inverted] .list--default::before {
+  & .ui-tabs-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: var(--tabs-justify, flex-start);
+    flex-direction: row;
+    gap: unset;
+
+    &:where([data-grow]) {
+      & .ui-tabs-control {
+        flex: 1;
+      }
+    }
+  }
+
+  & .ui-tabs-body {
+    flex-grow: unset;
+  }
+
+  & .ui-tabs-control {
+    position: relative;
+    white-space: nowrap;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    user-select: none;
+
+    &:focus {
+      z-index: 1;
+    }
+
+    &:where(:disabled, [data-disabled]) {
+      cursor: not-allowed;
+    }
+  }
+
+  & .ui-tabs-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .ui-tabs-label {
+    flex: 1;
+    text-align: center;
+  }
+
+  &:where([data-inverted]) {
+    /* TODO: fix naming */
+    & .list--default::before {
       top: 0;
       bottom: unset;
     }
-
-.ui-tabs[data-orientation='vertical'] {
-    display: flex;
   }
 
-.ui-tabs[data-orientation='vertical'][data-placement='right'] {
-      flex-direction: row-reverse;
+  &:where([data-orientation='vertical']) { 
+    display: flex;
+
+    & .ui-tabs-controls {
+      flex-direction: column;
     }
 
-.ui-tabs .ui-tabs-controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: var(--tabs-justify, flex-start);
-  flex-direction: row;
-  gap: unset;
-}
+    & .ui-tabs-body {
+      flex-grow: 1;
+    }
 
-
-.ui-tabs[data-orientation='vertical'] .ui-tabs-controls {
-    flex-direction: column;
-}
-
-.ui-tabs .ui-tabs-controls:where([data-grow]) .ui-tabs-control {
-    flex: 1;
+    &:where([data-placement='right']) {
+      flex-direction: row-reverse;
+    }
   }
-
-.ui-tabs .ui-tabs-body {
-  flex-grow: unset;
-}
-
-.ui-tabs[data-orientation='vertical'] .ui-tabs-body {
-  flex-grow: 1;
-}
-
-.ui-tabs .ui-tabs-control {
-  position: relative;
-  white-space: nowrap;
-  z-index: 0;
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  user-select: none;
-}
-
-.ui-tabs .ui-tabs-control:where(:disabled, [data-disabled]) {
-    cursor: not-allowed;
-  }
-
-.ui-tabs .ui-tabs-control:focus {
-    z-index: 1;
-  }
-
-.ui-tabs .ui-tabs-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ui-tabs .ui-tabs-label {
-  flex: 1;
-  text-align: center;
 }

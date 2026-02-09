@@ -3,14 +3,14 @@
 
     inset: 0;
     position: absolute;
-}
 
-.ui-overlay[data-fixed] {
-    position: fixed;
-}
+    &:where([data-fixed]) {
+        position: fixed;
+    }
 
-.ui-overlay[data-center] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &:where([data-center]) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
