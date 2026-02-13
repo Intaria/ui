@@ -1,0 +1,43 @@
+.ui-list {
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+    padding-inline-start: var(--list-marker-gap);
+
+    &[data-type='none'] {
+        --list-marker-gap: 0;
+    }
+
+    & .ui-list-item {
+        white-space: normal;
+
+        &:where([data-with-icon]) {
+            list-style: none;
+
+            & .ui-list-item-inner {
+                --list-item-direction: row;
+                --list-item-align: center;
+            }
+        }
+
+        &:where(:not(:first-of-type)) {
+            margin-top: var(--list-spacing, 0);
+        }
+
+        &:where([data-centered]) {
+            line-height: 1;
+        }
+    }
+
+    & .ui-list-item-inner {
+        display: inline-flex;
+        flex-direction: var(--list-item-direction, column);
+        align-items: var(--list-item-align, flex-start);
+        white-space: normal;
+    }
+
+    .ui-list-item-icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

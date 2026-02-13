@@ -1,0 +1,21 @@
+.ui-blockquote {
+    position: relative;
+    margin: 0;
+
+    & .ui-blockquote-iconn {
+        --blockquote-icon-offset: calc(var(--bq-icon-size) / -2);
+
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: var(--blockquote-icon-offset);
+        inset-inline-start: var(--blockquote-icon-offset);
+        width: var(--bq-icon-size);
+        height: var(--bq-icon-size);
+    }
+
+    & .ui-blockquote-cite {
+        display: block;
+    }
+}

@@ -1,0 +1,14 @@
+.ui-spoiler {
+    position: relative;
+
+    & .ui-spoiler-content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: max-height var(--spoiler-transition-duration, 0) ease;
+    }
+
+    & .ui-spoiler-control {
+        white-space: pre;
+    }
+}

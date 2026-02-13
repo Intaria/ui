@@ -68,7 +68,7 @@ export const theme = createTheme({
         Blockquote: {
             classNames: {
                 root: 'ui-blockquote',
-                icon: 'ui-icon',
+                icon: 'ui-blockquote-icon',
                 cite: 'ui-blockquote-cite'
             }
         },
@@ -267,8 +267,8 @@ export const theme = createTheme({
             classNames: {
                 root: 'ui-list',
                 item: 'ui-list-item',
-                itemIcon: 'ui-icon',
-                itemLabel: 'ui-label',
+                itemIcon: 'ui-list-item-icon',
+                itemLabel: 'ui-list-item-label',
                 itemWrapper: 'ui-list-item-inner'
             }
         },
@@ -282,6 +282,11 @@ export const theme = createTheme({
                 root: 'ui-loading',
                 overlay: 'ui-loading-overlay',
                 loader: 'ui-loading-spinner'
+            }
+        },
+        Mark: {
+            classNames: {
+                root: 'ui-highlight'
             }
         },
         Menu: {
@@ -519,8 +524,8 @@ export const theme = createTheme({
         Spoiler: {
             classNames: {
                 root: 'ui-spoiler',
-                content: 'ui-spoiler-container',
-                control: 'ui-control'
+                content: 'ui-spoiler-content',
+                control: 'ui-spoiler-control'
             }
         },
         Stepper: {
@@ -635,6 +640,11 @@ export const theme = createTheme({
             classNames: {
                 tooltip: 'ui-tooltip',
                 arrow: 'ui-arrow'
+            }
+        },
+        Typography: {
+            classNames: {
+                root: 'ui-typography'
             }
         },
         YearPicker: {
