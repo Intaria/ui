@@ -1,0 +1,129 @@
+.ui-scroll-area {
+    --scroll-area-bar-size: 12px;
+
+    position: relative;
+    overflow: hidden;
+
+    & .ui-scroll-area-viewport {
+      scrollbar-width: none;
+      overscroll-behavior: var(--scroll-area-over-scroll-behavior);
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      height: 100%;
+
+      &::-webkit-scrollbar {
+          display: none;
+      }
+
+      &:where([data-scrollbars='xy'], [data-scrollbars='y']) {
+          &:where(
+            [data-offset-scrollbars='xy'],
+            [data-offset-scrollbars='y'],
+            [data-offset-scrollbars='present']
+          ) {
+              &:where([data-vertical-hidden]) {
+                  padding-inline-end: 0;
+                  padding-inline-start: 0;
+              }
+
+              &:not([data-vertical-hidden]) {
+                  padding-inline-end: var(--scroll-area-bar-size);
+                  padding-inline-start: unset;
+              }
+          }
+      }
+
+      &:where([data-scrollbars='xy'], [data-scrollbars='x']) {
+          &:where(
+            [data-offset-scrollbars='xy'],
+            [data-offset-scrollbars='x'],
+            [data-offset-scrollbars='present']
+          ) {
+              &:where([data-horizontal-hidden]) {
+                  padding-bottom: 0;
+              }
+
+              &:not([data-horizontal-hidden]) {
+                  padding-bottom: var(--scroll-area-bar-size);
+              }
+          }
+      }
+  }
+
+  & .ui-scroll-area-bar {
+      user-select: none;
+      touch-action: none;
+      box-sizing: border-box;
+      transition:
+        background-color var(--scroll-area-transition-duration, 0) ease,
+        opacity var(--scroll-area-transition-duration, 0) ease;
+
+      padding: calc(var(--scroll-area-bar-size) / 5);
+      display: flex;
+      background-color: transparent;
+      flex-direction: row;
+
+      &:where([data-hidden], [data-state='hidden']) {
+          display: none;
+      }
+
+      &:where([data-orientation='vertical']) {
+          width: var(--scroll-area-bar-size);
+          top: 0;
+          bottom: var(--scroll-area-corner-width);
+          inset-inline-end: 0;
+      }
+
+      &:where([data-orientation='horizontal']) {
+          height: var(--scroll-area-bar-size);
+          flex-direction: column;
+          bottom: 0;
+          inset-inline-start: 0;
+          inset-inline-end: var(--scroll-area-corner-width);
+      }
+  }
+
+  & .ui-scroll-area-thumb {
+      flex: 1;
+      position: relative;
+      transition: background-color var(--scroll-area-transition-duration, 0) ease;
+      overflow: hidden;
+      opacity: var(--scroll-area-thumb-opacity, 1);
+
+      &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+      }
+  }
+
+  & .ui-scroll-area-corner {
+      position: absolute;
+      opacity: 0;
+      transition: opacity var(--scroll-area-transition-duration, 0) ease;
+      display: block;
+      inset-inline-end: 0;
+      bottom: 0;
+
+      &:where([data-hovered]) {
+          opacity: 1;
+      }
+
+      &:where([data-hidden]) {
+          display: none;
+      }
+  }
+
+  & .ui-scroll-area-content {
+      min-width: 100%;
+  }
+
+  &:where([data-autosize]) .ui-scroll-area {
+      min-width: min-content;
+  }
+}

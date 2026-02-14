@@ -286,7 +286,7 @@ export const theme = createTheme({
         },
         Mark: {
             classNames: {
-                root: 'ui-highlight'
+                root: 'ui-mark'
             }
         },
         Menu: {
@@ -343,6 +343,15 @@ export const theme = createTheme({
                 pillsList: 'ui-pills'
             }
         },
+        /*
+        TODO: not working currently
+        NavigationProgress: {
+            classNames: {
+                root: 'ui-navigation-progress',
+                section: 'ui-navigation-progress-section'
+            }
+        },
+        */
         Notification: {
             classNames: {
                 root: 'ui-notification',
@@ -415,7 +424,8 @@ export const theme = createTheme({
         Popover: {
             classNames: {
                 dropdown: 'ui-popover',
-                arrow: 'ui-arrow'
+                arrow: 'ui-popover-arrow',
+                overlay: 'ui-popover-overlay'
             }
         },
         Progress: {
@@ -468,11 +478,12 @@ export const theme = createTheme({
         },
         ScrollArea: {
             classNames: {
-                root: 'ui-scroll',
-                viewport: 'ui-scroll-inner',
-                scrollbar: 'ui-scroll-bar',
-                thumb: 'ui-scroll-thumb',
-                corner: 'ui-scroll-corner'
+                root: 'ui-scroll-area',
+                content: 'ui-scroll-area-content',
+                viewport: 'ui-scroll-area-viewport',
+                scrollbar: 'ui-scroll-area-bar',
+                thumb: 'ui-scroll-area-thumb',
+                corner: 'ui-scroll-area-corner'
             }
         },
         SegmentedControl: {
@@ -639,7 +650,7 @@ export const theme = createTheme({
         Tooltip: {
             classNames: {
                 tooltip: 'ui-tooltip',
-                arrow: 'ui-arrow'
+                arrow: 'ui-tooltip-arrow'
             }
         },
         Typography: {

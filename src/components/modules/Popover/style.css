@@ -1,0 +1,23 @@
+.ui-popover {
+    position: absolute;
+    border: var(--popover-border, none);
+
+    & .ui-popover-arrow {
+        background-color: inherit;
+        border: var(--popover-border, none);
+        z-index: 1;
+    }
+
+    & .ui-popover-overlay {
+        position: fixed;
+        inset: 0;
+    }
+
+    &:where([data-fixed]) {
+        position: fixed;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

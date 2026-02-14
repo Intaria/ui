@@ -10,13 +10,11 @@ export interface ModalProps extends BaseModalProps {
 
 export const Modal = ({children, ...props}: ModalProps) => {
     return (
-        <>
-            <BaseModal
-                {...props}
-            >                      
-                {children}
-            </BaseModal>
-        </>
+        <BaseModal
+            {...props}
+        >                      
+            {children}
+        </BaseModal>
     )
 }
 

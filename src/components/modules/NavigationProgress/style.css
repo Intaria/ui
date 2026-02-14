@@ -1,0 +1,21 @@
+.ui-navigation-progress {
+    position: fixed;
+    top: 0;
+    inset-inline: 0;
+    z-index: var(--navigation-progress-z-index);
+    background-color: transparent;
+    transition: opacity var(--navigation-progress-transition-duration, 0) ease;
+    transition-delay: var(--navigation-progress-transition-delay, 0);
+    opacity: 0;
+    overflow: visible;
+
+    & .ui-navigation-progress-section {
+        position: relative;
+        transition: width var(--navigation-progress-transition-duration, 0) ease;
+        overflow: visible;
+    }
+
+    &:where([data-mounted]) {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,46 @@
+.ui-notifications {
+    position: fixed;
+    width: 100%;
+    z-index: var(--notifications-z-index);
+    pointer-events: none;
+
+    & .ui-notification {
+        pointer-events: auto;
+
+        & + .ui-notification {
+            margin-top: var(--notifications-spacing);
+        }
+    }
+
+    &:where([data-position='top-center']) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:where([data-position='top-left']) {
+        top: 0;
+        left: 0;
+    }
+
+    &:where([data-position='top-right']) {
+        top: 0;
+        right: 0;
+    }
+
+    &:where([data-position='bottom-center']) {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:where([data-position='bottom-left']) {
+        bottom: 0;
+        left: 0;
+    }
+
+    &:where([data-position='bottom-right']) {
+        bottom: 0;
+        right: 0;
+    }
+}
