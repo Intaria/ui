@@ -1,2 +1,1 @@
-export {Mark} from '@mantine/core'
-export type {MarkProps} from '@mantine/core'
+export { Highlight as Mark } from '@ark-ui/react/highlight'

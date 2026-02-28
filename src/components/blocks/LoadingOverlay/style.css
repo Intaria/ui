@@ -1,0 +1,20 @@
+.ui-loading {
+  --loading-z-index: 2;
+
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: var(--loading-z-index);
+
+  & .ui-loading-spinner {
+    position: relative;
+    z-index: calc(var(--loading-z-index) + 1);
+  }
+
+  & .ui-loading-overlay {
+    z-index: var(--loading-z-index);
+  }
+}

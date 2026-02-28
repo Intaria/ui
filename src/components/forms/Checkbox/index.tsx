@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Checkbox} from '@mantine/core'
-export type {CheckboxProps} from '@mantine/core'
+export { Checkbox } from '@ark-ui/react/checkbox'

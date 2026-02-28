@@ -1,6 +1,3 @@
 import './style.css'
 
-export {Tabs} from '@mantine/core'
-export type {TabsProps} from '@mantine/core'
-
-//TOOD: remove variants class
+export { Tabs } from '@ark-ui/react/tabs'

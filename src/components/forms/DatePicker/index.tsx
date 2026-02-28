@@ -1,4 +1,3 @@
 import './style.css'
 
-export {DatePicker} from '@mantine/dates'
-export type {DatePickerProps} from '@mantine/dates'
+export { DatePicker } from '@ark-ui/react/date-picker'

@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Popover} from '@mantine/core'
-export type {PopoverProps} from '@mantine/core'
+export { Popover } from '@ark-ui/react/popover'

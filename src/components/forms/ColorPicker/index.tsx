@@ -1,4 +1,3 @@
 import './style.css'
 
-export {ColorPicker} from '@mantine/core'
-export type {ColorPickerProps} from '@mantine/core'
+export { ColorPicker } from '@ark-ui/react/color-picker'

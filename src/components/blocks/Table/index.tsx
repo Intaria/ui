@@ -2,12 +2,11 @@
 
 import {useState} from 'react'
 
-import {Table as BaseTable} from '@mantine/core'
-import type {TableProps as BaseTableProps} from '@mantine/core'
-
-import {Icon} from '~ui/components'
-
 import './style.css'
+
+//TODO
+
+/*
 
 interface TableProps extends Omit<BaseTableProps, "borderColor" | "highlightOnHoverColor" | "horizontalSpacing" | "stripedColor" | "verticalSpacing"> {}
 
@@ -41,14 +40,12 @@ const Thead = ({headers = [], sort = '', sortIconUp = 'icon-sort-up', sortIconDo
 	const [sortDir, setSortDir] = useState(sort ? sort.split(':')?.[1] : null)
 
     //TODO: проверить, нужно ли:
-    /*
-    useEffect(() => {
-        if (sort) {
-            setSortBy(sort ? sort.split(':')?.[0] : null)
-            setSortDir(sort ? sort.split(':')?.[1] : null)
-        }
-    }, [sort])
-    */
+    //useEffect(() => {
+    //    if (sort) {
+    //        setSortBy(sort ? sort.split(':')?.[0] : null)
+    //        setSortDir(sort ? sort.split(':')?.[1] : null)
+    //    }
+    //}, [sort])
 
     const handleSort = (row: TableTheadRowProps) => {
         if (onSort && row['sortBy'] && row['sortDir']?.length) {
@@ -107,3 +104,4 @@ Table.ScrollContainer = BaseTable.ScrollContainer
 
 export {Table}
 export type {TableProps}
+*/

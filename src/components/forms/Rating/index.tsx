@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Rating} from '@mantine/core'
-export type {RatingProps} from '@mantine/core'
+export { RatingGroup as Rating } from '@ark-ui/react/rating-group'

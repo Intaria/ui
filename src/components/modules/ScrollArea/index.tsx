@@ -1,4 +1,3 @@
 import './style.css'
 
-export {ScrollArea} from '@mantine/core'
-export type {ScrollAreaProps} from '@mantine/core'
+export { ScrollArea } from '@ark-ui/react/scroll-area'

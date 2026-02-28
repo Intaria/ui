@@ -1,6 +1,3 @@
-export {useForm} from '@mantine/form'
-export {useUncontrolled as useFormInput} from '@mantine/hooks'
+export { useForm } from "react-hook-form"
 
-export {zod4Resolver as schemaResolver} from 'mantine-form-zod-resolver'
-
-export type {UseFormReturnType as FormHandlerType} from '@mantine/form'
+export { zodResolver as schemaResolver } from "@hookform/resolvers/zod"

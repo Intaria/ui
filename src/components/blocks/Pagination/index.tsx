@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Pagination} from '@mantine/core'
-export type {PaginationProps} from '@mantine/core'
+export { Pagination } from '@ark-ui/react/pagination'

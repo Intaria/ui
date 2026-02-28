@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Select} from '@mantine/core'
-export type {SelectProps} from '@mantine/core'
+export { Select } from '@ark-ui/react/select'

@@ -1,2 +1,1 @@
-export {Portal} from '@mantine/core'
-export type {PortalProps} from '@mantine/core'
+export { Portal } from '@ark-ui/react/portal'

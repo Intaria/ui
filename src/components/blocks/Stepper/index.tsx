@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Stepper} from '@mantine/core'
-export type {StepperProps} from '@mantine/core'
+export { Steps as Stepper } from '@ark-ui/react/steps'

@@ -1,11 +1,10 @@
 import {createElement} from 'react'
-import {Breadcrumbs as BaseBreadcrumbs} from '@mantine/core'
-import type {BreadcrumbsProps as BaseBreadcrumbsProps} from '@mantine/core'
-
-import {Link} from '~ui/components'
 
 import './style.css'
 
+//TODO:
+
+/* 
 interface BreadcrumbsProps extends Omit<BaseBreadcrumbsProps, "separatorMargin" | "children"> {
     items?: {
         title: string,
@@ -34,3 +33,4 @@ const Breadcrumbs = ({children = null, items, separator = '/', ...props}: Breadc
 
 export {Breadcrumbs}
 export type {BreadcrumbsProps}
+*/

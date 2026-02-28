@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Tooltip} from '@mantine/core'
-export type {TooltipProps} from '@mantine/core'
+export { Tooltip } from '@ark-ui/react/tooltip'

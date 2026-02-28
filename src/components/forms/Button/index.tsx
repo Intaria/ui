@@ -1,4 +1,13 @@
+import type { ComponentProps } from 'react'
+
+import { ark } from '@ark-ui/react/factory'
+
 import './style.css'
 
-export {Button} from '@mantine/core'
-export type {ButtonProps} from '@mantine/core'
+export type ButtonProps = ComponentProps<typeof Button>
+
+export const Button = ({children = null, ...props}) => (
+    <ark.button {...props}>
+        {children}
+    </ark.button>
+)

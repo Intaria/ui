@@ -1,4 +1,3 @@
 import './style.css'
 
-export {PinInput} from '@mantine/core'
-export type {PinInputProps} from '@mantine/core'
+export { PinInput } from '@ark-ui/react/pin-input'

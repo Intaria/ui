@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Menu} from '@mantine/core'
-export type {MenuProps} from '@mantine/core'
+export { Menu } from '@ark-ui/react/menu'

@@ -1,4 +1,3 @@
 import './style.css'
 
-export {Carousel} from '@mantine/carousel'
-export type {CarouselProps} from '@mantine/carousel'
+export { Carousel } from '@ark-ui/react/carousel'
